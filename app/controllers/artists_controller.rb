@@ -1,7 +1,12 @@
 class ArtistsController < ApplicationController
-    before_action :set_artist, except: [:new, :create]
+    # before_action :set_artist, except: [:new, :create]
+
+    def index 
+        @artist = Artist.all 
+    end
 
     def show 
+        set_artist
     end
 
     def new 
@@ -15,6 +20,7 @@ class ArtistsController < ApplicationController
     end 
 
     def edit
+        set_artist
     end
 
     def update 

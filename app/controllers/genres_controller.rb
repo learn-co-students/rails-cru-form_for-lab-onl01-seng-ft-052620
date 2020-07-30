@@ -1,7 +1,12 @@
 class GenresController < ApplicationController
-    before_action :set_genre, except: [:new, :create]
+    # before_action :set_genre, except: [:new, :create]
+
+    def index 
+        @genre = Genre.all 
+    end
 
     def show 
+        set_genre
     end
 
     def new 
@@ -15,6 +20,7 @@ class GenresController < ApplicationController
     end 
 
     def edit
+        set_genre
     end
 
     def update 

@@ -1,7 +1,11 @@
 class SongsController < ApplicationController
-    before_action :set_song, except: [:new, :create]
+    # before_action :set_song, except: [:new, :create]
+    def index 
+        @song = Song.all 
+    end 
 
     def show 
+        set_song
     end
 
     def new 
@@ -15,6 +19,7 @@ class SongsController < ApplicationController
     end 
 
     def edit
+        set_song
     end
 
     def update 

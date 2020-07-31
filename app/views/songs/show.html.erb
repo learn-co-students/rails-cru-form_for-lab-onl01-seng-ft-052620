@@ -1,0 +1,7 @@
+<%= link_to "Create new song", new_song_path %>
+
+<h1><%= @song.name %></h1>
+<div><%= link_to @song.artist.name, @song.artist %></div>
+<div><%= link_to @song.genre.name, @song.genre %></div>
+
+<%= link_to "Edit", edit_song_path(@song) %>

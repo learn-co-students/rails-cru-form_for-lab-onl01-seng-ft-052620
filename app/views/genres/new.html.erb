@@ -1,0 +1,5 @@
+<h1>Genre Form</h1>
+<%= form_for @genre do |g| %>
+<h2> <%= g.text_field :name, placeholder: "Enter genre's name" %> </h2>
+<%= g.submit "Create Genre" %>
+<% end %>

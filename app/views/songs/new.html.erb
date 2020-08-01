@@ -1,0 +1,7 @@
+<h1>Song Form</h1>
+<%= form_for @song do |s| %>
+<h2> <%= s.text_field :name, placeholder: "Enter song's name" %> </h2>
+<h2> <%= s.number_field :artist_id, placeholder: "Enter song's artist id" %> </h2>
+<h2> <%= s.number_field :genre_id, placeholder: "Enter song's genre id" %> </h2>
+<%= s.submit "Create Song" %>
+<% end %>

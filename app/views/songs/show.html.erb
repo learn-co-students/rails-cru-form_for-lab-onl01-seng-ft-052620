@@ -1,0 +1,7 @@
+<h1><%= @song.name %>:</h1>
+<% if @song.artist%>
+<p class="">Artist: <a href="/artists/<%=@song.artist.id%>"><%=@song.artist.name%></a></p> 
+<% end %>
+<% if @song.genre %>
+<p class="">Genre: <a href="/genres/<%=@song.genre.id%>"><%=@song.genre.name%></a></p>
+<% end %>
